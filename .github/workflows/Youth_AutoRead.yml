@@ -11,18 +11,18 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/bigchalizi/Youth_speed.git ~/Youth_speed
+          git clone https://github.com/bigchalizi/Youth_speed.git ~/js
       - name: Use Node.js 14.x
         uses: actions/setup-node@v1
         with:
           node-version: 14.x
       - name: npm install
         run: |
-          cd ~/Youth_speed
+          cd ~/js
           npm install
           npm install cron
           npm install request
       - name: '运行 【中青阅读】'
         run: |
-          cd ~/Youth_speed   
+          cd ~/js   
           node Youth_AutoRead.js
