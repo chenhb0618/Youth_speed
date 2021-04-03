@@ -1,11 +1,11 @@
 
 const $ = new Env("中青看点")
 
-let readbody = require("./read1body");
+let readbody = require("./readbody");
 
 let bodys=readbody.ArticleBodys;
 let AddTimeBody=readbody.AddTimeBody;
-let YouthBody = bodys.split(',');
+let YouthBody = bodys.split('&');
 let ReadArr = [];
 let readscore=0;
 
