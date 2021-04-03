@@ -1,7 +1,7 @@
 
 const $ = new Env("中青看点")
 
-let readbody = require("./readbody");
+let readbody = require("./read1body");
 
 let bodys=readbody.ArticleBodys;
 let AddTimeBody=readbody.AddTimeBody;
