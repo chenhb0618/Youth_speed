@@ -1,4 +1,4 @@
-name: 中青阅读
+name: 中青看点极速版
 
 on:
   workflow_dispatch:
@@ -22,7 +22,7 @@ jobs:
       - name: 'Install requests'
         run: pip install requests
 
-      - name: 'run 中青阅读'
+      - name: 'run 中青看点极速版'
         run: python3 youth.py
         # 目前最大5个账号，可按格式继续填写
         env:
