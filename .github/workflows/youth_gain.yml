@@ -1,13 +1,12 @@
-
-
-name: 中青浏览赚
+name: 中青看点看看赚
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 0 * * *'
+     - cron: '0 14,22 * * *'
   watch:
-    types: youth_gain
+    types: started
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -16,7 +15,8 @@ jobs:
       YOUTH_START: ${{ secrets.YOUTH_START }}
       YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
     steps:
-      - uses: actions/checkout@v1
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -24,11 +24,11 @@ jobs:
       - name: npm install
         run: |
           npm install
-          
-      - name: '运行 【中青浏览赚】'
+      - name: '运行 【中青看点看看赚】'
         if: env.YOUTH_START
         run: |
           node youth_gain.js
         env:
-          YOUTH_START: ${{ secrets.YOUTH_START }}
-          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
+          #TZ: Asia/shanghai
+          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN}}
+          TG_USER_ID: ${{ secrets.TG_USER_ID}}
