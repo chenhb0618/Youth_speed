@@ -1,12 +1,14 @@
-name: 中青看点看看赚
+# This workflow will do a clean install of node dependencies, build the source code and run tests across different versions of node
+# For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+
+name: 中青浏览赚（四个账号）
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 14,22 * * *'
+     - cron: '0 0 * * *'
   watch:
-    types: started
-
+    types: youth_gain
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,21 +17,19 @@ jobs:
       YOUTH_START: ${{ secrets.YOUTH_START }}
       YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
     steps:
-      - name: Checkout
-        uses: actions/checkout@v2
+      - uses: actions/checkout@v1
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
-        if: env.YOUTH_HEADER
         run: |
           npm install
-      - name: '运行 【中青看点看看赚】'
+          
+      - name: '运行 【中青浏览赚】'
         if: env.YOUTH_START
         run: |
           node youth_gain.js
         env:
-          #TZ: Asia/shanghai
-          TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN}}
-          TG_USER_ID: ${{ secrets.TG_USER_ID}}
+          YOUTH_START: ${{ secrets.YOUTH_START }}
+          YOUTH_LOOK: ${{ secrets.YOUTH_LOOK }}
