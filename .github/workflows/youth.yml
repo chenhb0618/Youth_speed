@@ -30,8 +30,14 @@ jobs:
             YOUTH_READBODY1: ${{ secrets.YOUTH_READBODY1 }}  #必须 账号1 body1
             YOUTH_READTIMEBODY1: ${{ secrets.YOUTH_READTIMEBODY1 }}  #必须 账号1 body1
             YOUTH_WITHDRAWBODY1: ${{ secrets.YOUTH_WITHDRAWBODY1 }}  #非必须 账号1提现 body1
-            YOUTH_STARTBODY1: ${{ secrets.YOUTH_STARTBODY1 }}
             YOUTH_SHAREBODY1: ${{ secrets.YOUTH_SHAREBODY1 }}
+            YOUTH_STARTBODY1: ${{ secrets.YOUTH_STARTBODY1 }}
+            YOUTH_HEADER2: ${{ secrets.YOUTH_HEADER2 }}
+            YOUTH_READBODY2: ${{ secrets.YOUTH_READBODY2 }}
+            YOUTH_READTIMEBODY2: ${{ secrets.YOUTH_READTIMEBODY2 }}
+            YOUTH_WITHDRAWBODY2: ${{ secrets.YOUTH_WITHDRAWBODY2 }}
+            YOUTH_SHAREBODY2: ${{ secrets.YOUTH_SHAREBODY2 }}
+            YOUTH_STARTBODY2: ${{ secrets.YOUTH_STARTBODY2 }}
             TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}  #非必须 tg机器人token
             TG_USER_ID: ${{ secrets.TG_USER_ID }}  #非必须 tg机器人userId
            
