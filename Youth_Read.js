@@ -33,11 +33,11 @@ if (!$.isNode() && !YouthBody == true) {
 } 
     
      else if (!$.isNode() && YouthBody.indexOf("&") > -1) {
-        YouthBodys = YouthBody.split("&")
+        YouthBody = YouthBody.split("&")
     };
     Object.keys(YouthBodys).forEach((item) => {
-        if (YouthBodys[item]) {
-            ReadArr.push(YouthBodys[item])
+        if (YouthBody[item]) {
+            ReadArr.push(YouthBody[item])
         }
     })
 
