@@ -40,7 +40,7 @@ if(!$.isNode()&&!YouthBody==true){
     bjTime = new Date(timestamp).toLocaleString('zh',{hour12:false,timeZoneName: 'long'});
     console.log(`\n === 脚本执行 ${bjTime} ===\n`);
   $.log("\n  您共获取"+ReadArr.length+"次阅读请求，任务开始\n")
-}
+
       
  !(async () => {
   if (!ReadArr[0]) {
