@@ -28,14 +28,14 @@ if (!$.isNode() && !YouthBody == true) {
         'open-url': "https://kandian.youth.cn/u/UnEWm"
     })
     return
-} else if (!$.isNode() && YouthBody.indexOf("&") == -1) {
+} else if (YouthBody.indexOf("&") == -1) {
     ReadArr.push(YouthBody)
 } 
     
-     else if (!$.isNode() && YouthBody.indexOf("&") > -1) {
+     else if ( YouthBody.indexOf("&") > -1) {
         YouthBody = YouthBody.split("&")
     };
-    Object.keys(YouthBodys).forEach((item) => {
+    Object.keys(YouthBody).forEach((item) => {
         if (YouthBody[item]) {
             ReadArr.push(YouthBody[item])
         }
