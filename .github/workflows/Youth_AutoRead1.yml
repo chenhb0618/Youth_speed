@@ -25,4 +25,4 @@ jobs:
       - name: '运行 【中青阅读】'
         run: |
           cd ~/js   
-          node Youth_AutoRead.js
+          node Youth_AutoRead1.js
