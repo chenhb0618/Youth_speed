@@ -30,9 +30,9 @@ if (!$.isNode() && !YouthBody == true) {
     return
 } else if (!$.isNode() && YouthBody.indexOf("&") == -1) {
     ReadArr.push(YouthBody)
-} else {
+} 
     
-    } else if (!$.isNode() && YouthBody.indexOf("&") > -1) {
+     else if (!$.isNode() && YouthBody.indexOf("&") > -1) {
         YouthBodys = YouthBody.split("&")
     };
     Object.keys(YouthBodys).forEach((item) => {
