@@ -1,9 +1,9 @@
-name: 中青阅读
+name: 中青阅读1
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '2-50/20 6-23/5 * * *'
+     - cron: '0 22,3 * * *'
   watch:
     types: started
 jobs:
@@ -23,7 +23,7 @@ jobs:
         run: |
           npm install
           
-      - name: '运行 【中青看点自动阅读】'
+      - name: '运行 【中青阅读1】'
         run: |
           node Youth_Read.js
 
