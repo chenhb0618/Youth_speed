@@ -92,7 +92,7 @@ function AutoRead() {
           if ($.isNode() && process.env.YOUTH_ATIME) {
             timebodyVal = process.env.YOUTH_ATIME;
           } else {
-            timebodyVal = $.getdata('autotime_zq');
+            timebodyVal = "p=9NwGV8Ov71o%3DgW5NEpb6rjb84bkaCQyOq-myT0C-Ktb_mEtDEGsOrBruuZzIpWlevTEf2n4e6SDtwtHI8jh7tGLFm1iscPtbZwlhO1--2rPMqEVay5SHQZ0Xa5om9y_QnFioIoDSg-ArtrfwznZt1IhRAOspLNm4F1Z4mRILDUTDM9AS-u45jBAQ0mfHVDOqjTdA3cIOpVw2xz4BHRmOo4kH9UxOzWpbPHYuEJJpqmgLnb7XohekV9xNqw7DRU1eNXoyXzjr1s0sPlOATKLhOm2HBjcCuImXbxMAZWgb6yww936ylw_NRtoerzvP5aPOXcd_mksurT91r07kdVM7phS92r1y1cWoY9r0Bp2qGVJq6LzwCtV1ij_fLDz8YfZDWGuJzA401jjk1EEMwgnUxnce6PxoJBee-vrLkjXbZ6O_LaTk62K0O-PvSCrRXQdHKx9bZzACgNM-O0mDUAh81Y1nHA5DbTyCVnrSYGV0TXzmy3Xh6T4pC1ETjC1YGU8qkdmNmjIX_NmtErBumI1zoy7h2o3A_AMw1n-ZV-s2t3nTDcPUJhOcy5ewVY7EfVBqb22qRXdXeoPWlAFzbQExDwip__P5k5TzJ2XsoqIAxptYNj5N04AlCI_fJ8dtTqnxFrPirb5IGpgtNb82has8bQ4ucKkU2wpQ4c2h35QSlmfhyFSZphOXv7nw0b9zqXCujo4GQjhp4dcZSDyPEiaMIK-gxIurXhMvp_ti6y9boEYlYnqJiAhJ1kCmOQl6N_kx2sfew3BpUAwsHy9-08tzIZ5xj6Q05ZJLjforK6kOONr6j-zc6Bt1PtWbyO6KE0lUzZnFfFUoFOXlbD4iMgODV6g%3D";
           }
           await readTime()
         };
