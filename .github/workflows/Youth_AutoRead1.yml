@@ -1,4 +1,4 @@
-name: 中青自动阅读2
+name: 中青自动阅读1
 
 on:
   workflow_dispatch:
