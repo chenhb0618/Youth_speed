@@ -757,7 +757,7 @@ def run():
       score = int(stat_res["user"]["score"])
       total_score = int(stat_res["user"]["total_score"])
 
-      if score >= 300000 and withdrawBody:
+      if score >= 100000 and withdrawBody:
         with_draw_res = withdraw(body=withdrawBody)
         if with_draw_res:
           result += f'\n【自动提现】：发起提现10元成功'
