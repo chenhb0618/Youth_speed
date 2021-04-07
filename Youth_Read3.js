@@ -126,7 +126,7 @@ function AutoRead() {
                 } else if (readres.success == false) {
                     console.log(`第${$.index}次阅读请求有误，请删除此请求`);
                    
-                    }
+                    
                 }
             }
          }else{ $.log("此body数据读取出错，跳过");}
