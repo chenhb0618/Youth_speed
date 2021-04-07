@@ -243,7 +243,7 @@ function Getbody() {
     }
 }
 
-export function isJSON(str: string) {
+function isJSON(str: string) {
     if (typeof str == 'string') {
         try {
             JSON.parse(str)
