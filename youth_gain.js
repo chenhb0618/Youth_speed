@@ -110,7 +110,7 @@ function GainStart() {
     return new Promise((resolve, reject) => {
         $.post(gainHost('task/browse_start.json', gainbody), async(error, resp, data) => {
             let startres = JSON.parse(data);
-
+   if (startres.success == true) {
                 comstate = startres.items.comtele_state;
                 if (comstate == 0) {
                     $.log("任务开始，" + startres.items.banner_id + startres.message);
@@ -119,7 +119,7 @@ function GainStart() {
                 } else if (comstate == 1) {
                     $.log("任务:" + startres.items.banner_id + "已完成，本次跳过");
                 }
-            
+          } else {$.log("任务出错" );}   
             resolve()
         })
     })
