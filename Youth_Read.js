@@ -131,7 +131,7 @@ function bodyInfo() {
 function AutoRead() {
     return new Promise((resolve, reject) => {
         $.post(batHost('article/complete.json', articlebody), async(error, response, data) => {
-         if(isJson(123)){
+         if(isJSON(123)){
            let readres = JSON.parse(data);
             //$.log(JSON.stringify(readres,null,2))
             if (readres.items.complete == 1) {
