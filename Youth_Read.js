@@ -131,7 +131,8 @@ function bodyInfo() {
 function AutoRead() {
     return new Promise((resolve, reject) => {
         $.post(batHost('article/complete.json', articlebody), async(error, response, data) => {
-            let readres = JSON.parse(data);
+         if(isJson(data)){
+           let readres = JSON.parse(data);
             //$.log(JSON.stringify(readres,null,2))
             if (readres.items.complete == 1) {
                 $.log(readres.items.max_notice)
@@ -176,6 +177,7 @@ function AutoRead() {
                     }
                 }
             }
+         }else{ $.log("此body数据读取出错，跳过");}
             resolve()
         })
     })
@@ -239,6 +241,18 @@ function Getbody() {
         $.log(`${$.name}获取阅读时长: 成功, timebodyVal: ${timebodyVal}`);
         $.msg($.name, `获取阅读时长: 成功🎉`, ``)
     }
+}
+
+function isJson(data)
+{
+	let is_json = false;
+	try {
+		JSON.stringify(JSON.parse(res.data),null,2);
+		is_json = true;
+    } catch (e) {
+        
+    }
+    return is_json;
 }
 
 
