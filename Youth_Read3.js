@@ -98,7 +98,7 @@ function AutoRead() {
                 $.log(readres.items.max_notice)
             } else {
                 if (readres.error_code == '0' && data.indexOf("read_score") > -1 && readres.items.read_score > 0) {
-                    console.log(`本次阅读获得${readres.items.read_score}个青豆，请等待30s后执行下一次阅读\n`);
+                    console.log(`本次阅读获得${readres.items.read_score}个青豆，请等待30s后执行下一次阅读`);
                     if (data.indexOf("ctype") > -1) {
                         if (readres.items.ctype == 0) {
                             artsnum += 1
@@ -122,7 +122,7 @@ function AutoRead() {
                         await $.wait(20000);
                     }
                 } else if (readres.error_code == '0' && data.indexOf('"score":0') > -1 && readres.items.score == 0) {
-                    $.log(`\n本次阅读获得0个青豆，等待10s即将开始下次阅读\n`);
+                    $.log(`本次阅读获得0个青豆，等待10s即将开始下次阅读`);
                 } else if (readres.success == false) {
                     console.log(`第${$.index}次阅读请求有误，请删除此请求`);
                    
