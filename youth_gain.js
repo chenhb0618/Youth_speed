@@ -129,7 +129,7 @@ function lookStart() {
     return new Promise((resolve, reject) => {
         $.post(gainHost('Nameless/adlickstart.json', lookbody), async(error, resp, data) => {
             startlk = JSON.parse(data);
-        if(data){
+     if (startlk.success == true) {
                 comstate = startlk.items.comtele_state;
                 if (comstate == 0) {
                     $.log("任务开始，" + startlk.items.banner_id + startlk.message);
