@@ -2,12 +2,12 @@ const $ = new Env('youthshare');
 let md5 = require('md5-node');
 let nowTime;
 let wxck;
-let articles = ["https://focus.youth.cn/article/s?signature=RQ3qz2nVgKk9rep70P3lmvhGLE9rukzl5Vm7yXmv0ZJLWANOM5&uid=54044975&phone_code=99c9ad889c37032c45b46685ca4524dd&scid=37142644&time=1616813361&app_version=2.0.2&sign=b22c2aaed713c4837835d042c197b8a9",
-"https://focus.youth.cn/article/s?signature=89NvAVZQolPrzM0a3VjweKCnLA3phL25Gm27gXDkJEqdw5xObL&uid=54044975&phone_code=99c9ad889c37032c45b46685ca4524dd&scid=37110399&time=1616813652&app_version=2.0.2&sign=89fcf04ab8f7bc96f527083ba584eb4c",
-"https://focus.youth.cn/article/s?signature=Wn8Pym36L9l0Yoz1yVldjeS8A9e0HYPrJEP4xKXjQqgZBMVdDe&uid=54044975&phone_code=d9f0e5eb60ba940c9bd128870152867f&scid=37040984&time=1616595940&app_version=2.0.2&sign=a54357531fed1be3fc08a4f66befb469",
-"https://focus.youth.cn/article/s?signature=k5Bv92bmMjwJEOP782N6g9uYZ3eLCzg6Bdb1gxne6rYKdpWVoR&uid=54044975&phone_code=d9f0e5eb60ba940c9bd128870152867f&scid=37019569&time=1616595966&app_version=2.0.2&sign=6811572bf395145fbf32b7b1d4c6915f",
-"https://focus.youth.cn/article/s?signature=ML5JYgKNrewq9QO4gMEkMAi5LEP6uevLXb6ayGDn2Z0PAvkopB&uid=54044975&phone_code=99c9ad889c37032c45b46685ca4524dd&scid=37127101&time=1616813688&app_version=2.0.2&sign=a65461e940267a0f68d825346d68e0f7",
-"https://focus.youth.cn/article/s?signature=j6LwoklONRyQvgd4kxBGbMSqKB0bFjXpVzg78M9zV2YP3KBGAe&uid=54044975&phone_code=99c9ad889c37032c45b46685ca4524dd&scid=37127064&time=1616813836&app_version=2.0.2&sign=4478fd094b8c70b1dfad5891c8764aa4"]
+let articles = ["https://focus.youth.cn/article/s?signature=ZRpgeBYKPdGlvj24GLkLNPszNpBxFq56om27X96VqmbxkDwr0n&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38182975&time=1620706664&app_version=2.0.2&sign=ee18df271b6b62f74ac355344de51f45",
+"https://focus.youth.cn/article/s?signature=0Z3Jgv96wqmVPeM7or95VNh68bxYcxKOGxn4jpGDnANbo8KXQr&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38251506&time=1620707324&app_version=2.0.2&sign=2017fa69c19c9fc1f8c56776db337fb5",
+"https://focus.youth.cn/article/s?signature=mq63rgk0doNXbYK7LKMkVXTNbB6ps8x2wQZ4EMLO9lwG2zQJeB&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38254845&time=1620707305&app_version=2.0.2&sign=853886e6631df1ee72d2afb72c04c4c1",
+"https://focus.youth.cn/article/s?signature=j6LwoklONRyQvgd4k0xkDqsqMKQnSjlOrKq78M9zV2YP3KBGAe&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38275729&time=1620710328&app_version=2.0.2&sign=706f3c43bc8a6dc9c7bc51eba90b430d",
+"https://focus.youth.cn/article/s?signature=QqvZWbEKpA2yrNR1M0nw0ktKAqOjULgDkK5a9VGjJl8gXB5keP&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38248094&time=1620710357&app_version=2.0.2&sign=8983bb30d6c7ec1d2f5b65a3a3e3fd9a",
+"https://focus.youth.cn/article/s?signature=LrNmbVzoOlxeyXw4pv95zPTeYxnAfzbjr33aM8ZkP3BAW9pJqD&uid=52849384&phone_code=687d9afde851246643cfeebbf97217bf&scid=38273449&time=1620710385&app_version=2.0.2&sign=4c7576cc9a1936f99c62904bb7a60ea6"]
 let encodearticles;
 
 
